@@ -94,8 +94,8 @@ if (isset($openshiftsocket)) {
 $active_group = 'default';
 $active_record = TRUE;
  
-$db['default']['hostname'] = getenv('OPENSHIFT_MYSQL_DB_HOST');
-$db['default']['port'] = getenv('OPENSHIFT_MYSQL_DB_PORT');
+$db['default']['hostname'] = 'localhost';
+$db['default']['port'] = '3306';
 $db['default']['username'] = 'adminSh1cHll';
 $db['default']['password'] = 'l-HP6SEl3fXu';
 $db['default']['database'] = 'nsnsearch';
