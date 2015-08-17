@@ -1,0 +1,23 @@
+<IfModule mod_rewrite.c>
+
+Options -Indexes
+
+RewriteEngine On
+RewriteBase /
+
+# you can add whatever extensions you want routed to your php script
+RewriteCond %{REQUEST_URI} \.(doc|zip|pdf)$ [NC]
+RewriteRule .* - [F]
+
+RewriteCond %{REQUEST_URI} ^system.*
+RewriteRule ^(.*)$ /stock/index.php/$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /stock/index.php/$1 [L]
+</IfModule>
+
+<IfModule !mod_rewrite.c>
+
+ErrorDocument 404 /index.php
+</IfModule>
