@@ -96,8 +96,8 @@ $active_record = TRUE;
  
 $db['default']['hostname'] = 'localhost';
 $db['default']['port'] = '3306';
-$db['default']['username'] = 'adminSh1cHll';
-$db['default']['password'] = 'l-HP6SEl3fXu';
+$db['default']['username'] = 'root';
+$db['default']['password'] = '';
 $db['default']['database'] = 'nsnsearch';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
