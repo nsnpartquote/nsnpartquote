@@ -55,7 +55,7 @@ class Dashboard extends CI_Controller {
 		$config = array();
 		$config = $this->config->item('EmailVars');
 		
-		$message= "Hi Dear Customer, <br/>
+		$message= "Dear Customer, <br/>
 		We received your order partid no : ".$part_no." quantities ".$total_products.".<br/> 
 		you should receive a confirmation mail shortly.
 		<br/> Thanks for placing order.";
