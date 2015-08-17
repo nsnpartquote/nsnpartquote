@@ -84,7 +84,7 @@ $db['default'] = array(
 	'save_queries' => TRUE
 );
 */
-$openshiftsocket = getenv('OPENSHIFT_MYSQL_DB_SOCKET');
+$openshiftsocket = getEnv('OPENSHIFT_MYSQL_DB_SOCKET');
 echo "OpenShift socket is [$openshiftsocket]";
  
 if (isset($openshiftsocket)) {
