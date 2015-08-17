@@ -84,7 +84,7 @@ $db['default'] = array(
 	'save_queries' => TRUE
 );
 */
-$openshiftsocket = getenv('OPENSHIFT_MYSQL_DB_SOCKET');
+/*$openshiftsocket = getenv('OPENSHIFT_MYSQL_DB_SOCKET');
 echo "OpenShift socket is [$openshiftsocket]";
  
 if (isset($openshiftsocket)) {
@@ -111,7 +111,7 @@ $db['default']['swap_pre'] = '';
 $db['default']['autoinit'] = TRUE;
 $db['default']['stricton'] = FALSE;
  
-phpinfo();
+phpinfo();*/
  
 /* End of file database.php */
 /* Location: ./application/config/database.php */
