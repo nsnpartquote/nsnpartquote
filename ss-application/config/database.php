@@ -84,7 +84,7 @@ $db['default'] = array(
 	'save_queries' => TRUE
 );
 */
-$openshiftsocket = getEnv('OPENSHIFT_MYSQL_DB_SOCKET');
+$openshiftsocket = getenv('OPENSHIFT_MYSQL_DB_SOCKET');
 echo "OpenShift socket is [$openshiftsocket]";
  
 if (isset($openshiftsocket)) {
@@ -94,8 +94,8 @@ if (isset($openshiftsocket)) {
 $active_group = 'default';
 $active_record = TRUE;
  
-$db['default']['hostname'] = 'OPENSHIFT_MYSQL_DB_HOST';
-$db['default']['port'] = 'OPENSHIFT_MYSQL_DB_PORT';
+$db['default']['hostname'] = getenv('OPENSHIFT_MYSQL_DB_HOST');
+$db['default']['port'] = getenv('OPENSHIFT_MYSQL_DB_PORT');
 $db['default']['username'] = 'adminSh1cHll';
 $db['default']['password'] = 'l-HP6SEl3fXu';
 $db['default']['database'] = 'nsnsearch';
