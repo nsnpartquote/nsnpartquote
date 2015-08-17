@@ -21,7 +21,7 @@ class Dashboard extends CI_Controller {
 	public function get_product_information(){
 	
 		$part_code = $this->input->post('part_search');
-		
+	
 		if($part_code){
 		$product_nsn_info = $this->stock_model->get_nsn_information($part_code);
 		$product_id = $product_nsn_info['product_fkid'];
