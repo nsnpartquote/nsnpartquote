@@ -6,7 +6,7 @@ class Dashboard extends CI_Controller {
 	public function __construct(){
 		parent::__construct();  
 	
-		//$this->load->model('stock_model');	
+		$this->load->model('stock_model');	
 		/*if( ! AdminID() )
 			redirect('sign-in');*/
 				
@@ -19,8 +19,6 @@ class Dashboard extends CI_Controller {
 		$this->load->view('includes/template', $data);
 	}
 	public function get_product_information(){
-		
-		exit;
 	
 		$part_code = $this->input->post('part_search');
 		
