@@ -64,7 +64,7 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => '127.11.172.2:3306',
+	'hostname' => 'localhost:3306',
 	'username' => 'adminPQNNZLd',
 	'password' => 's9-utQL3M8Lh',
 	'database' => 'nsnsearch',
