@@ -58,7 +58,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | The $query_builder variables lets you determine whether or not to load
 | the query builder class.
 */
-
+/*
 $active_group = 'default';
 $query_builder = TRUE;
 
@@ -83,3 +83,35 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
+*/
+$openshiftsocket = getenv('OPENSHIFT_MYSQL_DB_SOCKET');
+echo "OpenShift socket is [$openshiftsocket]";
+ 
+if (isset($openshiftsocket)) {
+   ini_set('mysql.default_socket', $openshiftsocket);
+}
+ 
+$active_group = 'default';
+$active_record = TRUE;
+ 
+$db['default']['hostname'] = 'OPENSHIFT_MYSQL_DB_HOST';
+$db['default']['hostname'] = 'OPENSHIFT_MYSQL_DB_PORT';
+$db['default']['username'] = 'OPENSHIFT_MYSQL_DB_USERNAME';
+$db['default']['password'] = 'OPENSHIFT_MYSQL_DB_PASSWORD';
+$db['default']['database'] = 'OPENSHIFT_APP_NAME';
+$db['default']['dbdriver'] = 'mysql';
+$db['default']['dbprefix'] = '';
+$db['default']['pconnect'] = TRUE;
+$db['default']['db_debug'] = TRUE;
+$db['default']['cache_on'] = FALSE;
+$db['default']['cachedir'] = '';
+$db['default']['char_set'] = 'utf8';
+$db['default']['dbcollat'] = 'utf8_general_ci';
+$db['default']['swap_pre'] = '';
+$db['default']['autoinit'] = TRUE;
+$db['default']['stricton'] = FALSE;
+ 
+phpinfo();
+ 
+/* End of file database.php */
+/* Location: ./application/config/database.php */
